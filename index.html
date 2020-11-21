@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Brayan Marin -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida Rapida-Brayan Marin</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+    <div   id="app">
+        <div class="container">
+
+          <form >
+            <div class="form-group">
+              <h4 id="label-clie"for="exampleInputEmail"> Cliente</h4>
+              <input id="clie" type="text" v-model="cliente" class="form-control" placeholder="Ingrese Su Nombre">
+            </div>
+            <div id="hambur" class="form-check-inline">
+              <input type="radio" v-model="producto" class="form-check-input" name="exampleRadios" id="exampleRadios1" value="H" checked>
+              <label for="exampleRadios1" class="form-check-label"> Hamburguesa</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" v-model="producto" class="form-check-input" name="exampleRadios" id="exampleRadios1" value="P" checked>
+              <label for="exampleRadios1" class="form-check-label"> Perro caliente</label>
+            </div>
+            <br>
+            <h4 id="sub">Productos Adicionales</h4> 
+            <div  id="adicionales" class="form-check form-check-inline">
+                <br>
+                <input type="checkbox" v-model="adiT" @change="setadcT" name="" id="adic1"> <label> Tocineta </label>
+                <input type="checkbox" v-model="adiP" @change="setadcP" name="" id="adic"> <label> Papas Fritas </label>
+                <input type="checkbox" v-model="adiQ" @change="setadcQ" name="" id="adic"> <label> Queso </label>
+                <input type="checkbox" v-model="adiC" @change="setadcC" name="" id="adic"><label> Porcion De Carne </label>
+            </div>
+            <h4 id="total">Total De La Compra:</h4>
+            <h5 id="total1" v-model="total"> </h5>
+            <br>
+            <div>
+              <h4 id="sub1" >Efectivo</h4>
+              <input id="clie1" type="number" class="form-control"  v-model="efectivo">
+              <h4>Cambio</h4>
+              <h4 v-text="cambio"></h4>
+            </div>
+            <div> 
+              <br>
+              <button  type="button" class="btn btn-danger" @click="cambio"> Cambio</button> 
+              
+              <button type="button" class="btn btn-dark" @click="pedido"> Montar Pedido</button>
+            </div>
+            <div>
+              <table class="table table-sm table-secondary">
+                <thead>
+                  <tr>
+                    <th>CLiente</th>
+                    <th> Producto</th>
+                    <th>Adiciones</th>
+                    <th> Total </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="objeto in arrayDatos" > 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </form>
+        </div>
+       
+        
+        </div>
+    <script src="JS/vue.js"></script>
+    <script src="JS/main.js"></script>  
+</body>
+
+</html>
