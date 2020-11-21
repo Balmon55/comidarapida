@@ -20,15 +20,5 @@ var app = new Vue({
     mensaje:"",
     arrayDatos:[],
      },
-     
-     methods: {
-       cambio:function(){
-        alert(`El cliente es : ${this.cliente}`);
-       }
-          
-       },
-       
-      
-     
    });
      //     Brayan Marin

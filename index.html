@@ -31,13 +31,13 @@
             <h4 id="sub">Productos Adicionales</h4> 
             <div  id="adicionales" class="form-check form-check-inline">
                 <br>
-                <input type="checkbox" v-model="adiT" @change="setadcT" name="" id="adic1"> <label> Tocineta </label>
-                <input type="checkbox" v-model="adiP" @change="setadcP" name="" id="adic"> <label> Papas Fritas </label>
-                <input type="checkbox" v-model="adiQ" @change="setadcQ" name="" id="adic"> <label> Queso </label>
-                <input type="checkbox" v-model="adiC" @change="setadcC" name="" id="adic"><label> Porcion De Carne </label>
+                <input type="checkbox" v-model="adiT"  name="" id="adic1"> <label> Tocineta </label>
+                <input type="checkbox" v-model="adiP" name="" id="adic"> <label> Papas Fritas </label>
+                <input type="checkbox" v-model="adiQ" name="" id="adic"> <label> Queso </label>
+                <input type="checkbox" v-model="adiC" name="" id="adic"><label> Porcion De Carne </label>
             </div>
             <h4 id="total">Total De La Compra:</h4>
-            <h5 id="total1" v-model="total"> </h5>
+            <h5 id="total1" v-text="total"> </h5>
             <br>
             <div>
               <h4 id="sub1" >Efectivo</h4>
